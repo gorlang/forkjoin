@@ -12,7 +12,7 @@ import (
 
 func TestCompute(t *testing.T) {
 
-	data := []string{"namenamename0namenamename1"}
+	data := []string{"Golang1Golang2Golang3Golang4"}
 	var test_data []string
 	test_size := 1000000
 	for i := 1; i <= test_size; i++ {
@@ -38,7 +38,7 @@ func TestCompute(t *testing.T) {
 		t.Error("Expected", expected_len, "but got", got_len)
 	}
 
-	expected_result := "1emanemaneman0emanemaneman"
+	expected_result := "4gnaloG3gnaloG2gnaloG1gnaloG"
 	got_result := collected[0]
 	if expected_result != collected[0] {
 		t.Error("Expected", expected_result, "but got", got_result)

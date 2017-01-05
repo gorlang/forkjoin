@@ -9,7 +9,7 @@ package main
 */
 
 /*
-	Compute method handles the forking of data and call to the actuall compute go routines.
+	Compute method handles the forking of data and call to the actual compute go routines.
 */
 
 func Compute(indata []string, result chan<- []string, fork_size int) {
@@ -36,7 +36,7 @@ func Compute(indata []string, result chan<- []string, fork_size int) {
 /*
 	Implementation of the actual computing logic.
 	Could be reduce, sum or whatever you like.
-	In this example we are just reversing the text in an array of strings. ("Golang" will be "galoG")
+	In this example we are just reversing the text in an array of strings. ("Golang" will be "gnaloG")
 */
 
 func ComputeDirect(indata []string, result chan<- []string) {
