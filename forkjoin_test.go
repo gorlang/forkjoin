@@ -29,7 +29,6 @@ func TestCompute(t *testing.T) {
 	collected := <-collector
 
 	end := time.Now().UnixNano()
-	fmt.Println("Started", GoCount, "go routines from", ForkCount, "forks.")
 	fmt.Println("Processed", len(collected), "words.")
 	fmt.Println("Took", (end-start)/1000000, "ms.")
 

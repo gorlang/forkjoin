@@ -10,12 +10,7 @@ package main
 
 /*
 	Compute method handles the forking of data and call to the actuall compute go routines.
-	ForkCount - keeps count of number of forks done, just for display purposes in test method.
-	GoCount - counts the number of actual compute processes (go routines) started.
 */
-
-var ForkCount int
-var GoCount int
 
 func Compute(indata []string, result chan<- []string, fork_size int) {
 
@@ -25,8 +20,6 @@ func Compute(indata []string, result chan<- []string, fork_size int) {
 		go ComputeDirect(indata, result)
 		return
 	}
-
-	ForkCount += 1
 
 	result_fork_a := make(chan []string)
 	result_fork_b := make(chan []string)
@@ -47,8 +40,6 @@ func Compute(indata []string, result chan<- []string, fork_size int) {
 */
 
 func ComputeDirect(indata []string, result chan<- []string) {
-
-	GoCount++
 
 	var res []string
 	for i := 0; i < len(indata); i++ {

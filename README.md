@@ -5,3 +5,5 @@ ForkJoin is a algorithm that splits the processing of data into subsequential sm
 If size of the indata array is larger than fork_size, computing of data will be split (forked) into two parts
 Thus there could be 1, 2, 4, 8, 16, 32 or more goroutines processing the data depending on initial size of data and
 selected fork_size.
+
+The End.
