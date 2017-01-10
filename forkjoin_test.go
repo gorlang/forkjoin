@@ -14,13 +14,13 @@ func TestCompute(t *testing.T) {
 
 	data := []string{"Golang1Golang2Golang3Golang4"}
 	var test_data []string
-	test_size := 1000000
+	test_size := 1000
 	for i := 1; i <= test_size; i++ {
 		test_data = append(test_data, data...)
 	}
 
 	collector := make(chan []string, 1)
-	fork_size := 250000
+	fork_size := 250
 	start := time.Now().UnixNano()
 
 	fmt.Println("Computing...")
