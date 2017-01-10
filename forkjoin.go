@@ -8,6 +8,10 @@ package main
 	selected fork_size.
 */
 
+func main() {
+	// busy doing nothing
+}
+
 /*
 	Compute method handles the forking of data and call to the actual compute go routines.
 */
